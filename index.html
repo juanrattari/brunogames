@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrunoGames | Inicio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#">Bruno Games</a>
+        <li class="barra-navegadora">
+                <a href="#">Inicio</a>
+                <a href="#precios">Precios</a>
+                <a href="./views/iniciarsesion.html">Iniciar Sesión</a>
+        </li>
+    </header>
+    <main>
+        <img class="logo" src="./img/BGTIRA.jpg" alt="logo">
+        <div id="precios">
+            <h1>Precios</h1>
+            <p class="precios-descripcion">Recordá los juegos que disfrutabas en tu infancia! Bruno Games es la consola de juegos retro mas moderna y simple que existe hoy en día en el mercado. Su formato en Pendrive brinda la posibilidad de tener un precio accesible para el público joven y adulto.</p>
+            <div class="botoncarrito"> 
+                <button id="boton-carrito">
+                    <iconify-icon icon="icons8:buy" width="35" height="35"></iconify-icon>
+                    <span id="contadorCarrito">0</span>
+                </button>
+            </div>
+            <button class="boton-test" id="btnTest">GUARDAR EN LOCALSTORAGE</button>
+            <div id="contenedorDeProductos">
+                <div class="producto">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>Bruno Games Inc. Derechos reservados 2022. <iconify-icon icon="fa-solid:registered"></iconify-icon></p>
+        </div>
+    </footer>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h2>Carrito de Compras</h2>
+            <button id="carritoCerrar"><iconify-icon icon="akar-icons:circle-x-fill" width="25" height="25"></iconify-icon></button>    
+            <div id="carritoContenedor">
+                <div class="producto-en-carrito">
+                </div>
+            </div> 
+            <p class="precio-producto">
+                Precio total: $<span id="precioTotal">0</span>
+            </p>       
+        </div>
+    </div>
+    <script src="./js/stock.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/funciones.js"></script>
+</body>
+</html>

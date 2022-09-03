@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrunoGames | Inicio</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    
 </head>
 <body>
     <header>
@@ -28,9 +31,8 @@
                     <span id="contadorCarrito">0</span>
                 </button>
             </div>
-            <button class="boton-test" id="btnTest">GUARDAR EN LOCALSTORAGE</button>
             <div id="contenedorDeProductos">
-                <div class="producto">
+                <div class="productos">
                 </div>
             </div>
         </div>
@@ -51,11 +53,16 @@
             </div> 
             <p class="precio-producto">
                 Precio total: $<span id="precioTotal">0</span>
-            </p>       
+            </p>     
+            <button id="btnConfirmarCompra" class="botonAgregarAlCarrito">Comprar</button>  
         </div>
     </div>
+   
     <script src="./js/stock.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/funciones.js"></script>
+  
+   
+    
 </body>
 </html>

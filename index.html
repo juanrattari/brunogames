@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
-    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <header>
@@ -32,10 +32,16 @@
                 </button>
             </div>
             <div id="contenedorDeProductos">
-                <div class="productos">
+                <div class="productos ">
                 </div>
             </div>
         </div>
+        <div>
+            <h2>Clientes satisfechos:</h2>
+            <div id="clientes">
+            </div>
+        </div>
+        
     </main>
     <footer>
         <div>
@@ -48,8 +54,7 @@
             <h2>Carrito de Compras</h2>
             <button id="carritoCerrar"><iconify-icon icon="akar-icons:circle-x-fill" width="25" height="25"></iconify-icon></button>    
             <div id="carritoContenedor">
-                <div class="producto-en-carrito">
-                </div>
+               
             </div> 
             <p class="precio-producto">
                 Precio total: $<span id="precioTotal">0</span>
@@ -61,8 +66,7 @@
     <script src="./js/stock.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/funciones.js"></script>
-  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
    
-    
 </body>
 </html>

@@ -41,7 +41,7 @@ mostrarConsolas()
 const mostrarEnCarrito = (productoAgregar) => {
     let div = document.createElement("div")
     div.className = "producto-en-carrito"
-    div.innerHTML +=`<img class="img-pendrive" src="./img/PENDRIVE.jpg" alt="Pendrive">
+    div.innerHTML +=`<img class="img-pendrive" src="./img/PENDRIVE.PNG" alt="Pendrive">
                     <p>Versión: ${productoAgregar.version}</p>
                     <p>Precio: $${productoAgregar.precio}</p>
                     <p id="cant${productoAgregar.id}">Cantidad: ${productoAgregar.cantidad}</p>
@@ -113,7 +113,7 @@ document.getElementById("btnConfirmarCompra").onclick = () => {
            
             if (result.isConfirmed) {
               Swal.fire('Te redireccionaremos a los métodos de pago. Cargando...', '', 'Comprando')
-              setTimeout(function(){location.href = "./pages/compra.html";} ,3000);
+              setTimeout(function(){location.href = "./pages/compra.html#contenedor-compra";} ,2000);
             } else if (result.isDenied) {
               Swal.fire('¡Regresa pronto!', '', 'info')
             }
@@ -150,7 +150,7 @@ function Verificar (){
         carritoDeCompras.forEach(productoAgregar => {
             let div = document.createElement("div")
             div.className = "producto-en-carrito"
-            div.innerHTML +=`<img class="img-pendrive" src="./img/PENDRIVE.jpg" alt="Pendrive">
+            div.innerHTML +=`<img class="img-pendrive" src="./img/PENDRIVE.PNG" alt="Pendrive">
                             <p>Versión: ${productoAgregar.version}</p>
                             <p>Precio: $${productoAgregar.precio}</p>
                             <p id="cant${productoAgregar.id}">Cantidad: ${productoAgregar.cantidad}</p>

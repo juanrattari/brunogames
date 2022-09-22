@@ -23,7 +23,7 @@ function Comprar (){
             carritoDeCompras.forEach(elemento => {
                 let div = document.createElement("div")
                 div.className = "compra-item"
-                div.innerHTML +=`<img class="img-pendrive" src="../img/PENDRIVE.jpg" alt="Pendrive">
+                div.innerHTML +=`<img class="img-pendrive" src="../img/PENDRIVE.PNG" alt="Pendrive">
                 <p>Versión: ${elemento.version}</p>
                 <p>Precio: $${elemento.precio}</p>
                 <p id="cant${elemento.id}">Cantidad: ${elemento.cantidad}</p>`

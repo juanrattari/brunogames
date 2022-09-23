@@ -39,13 +39,32 @@ btnEfectivo.addEventListener("click",()=> {
     Swal.fire(
         'Te esperamos en el local para pagar en Efectivo',
         'Muchas gracias!',
-        'Exitoso'
+        'success'
       )
+      const btnConfirmar = document.querySelector(".swal2-confirm");
+      btnConfirmar.addEventListener("click",()=>{
+        volverAlIndex()
+      })
 })
+
 btnTransferencia.addEventListener("click",()=> {
     Swal.fire(
         'CBU: 1022115551458745232102 Titular: BrunoGames Inc. - - CUIT: 30-77777777-2',
         'Muchas gracias!',
-        'Exitoso'
+        'success'
       )
+       const btnConfirmar = document.querySelector(".swal2-confirm");
+       btnConfirmar.addEventListener("click",()=>{
+        volverAlIndex()
+    })
 })
+
+function volverAlIndex(){
+    Swal.fire({
+        icon: 'warning',
+        title: 'Te redireccionaremos al Inicio. Espera...',
+        showConfirmButton: false,
+        timer: 2500
+    })
+    setTimeout(function(){location.href = "../index.html";} ,2500);
+}

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 html{
 font-family: sans-serif;
 color: rgb(21, 21, 21);
 }
-
 
 body{
     text-align: center;
@@ -14,6 +14,7 @@ body{
     max-width: 1200px;
     margin: 0 auto;
 }
+
 header{
     display: flex;
     flex-direction: row;
@@ -26,8 +27,8 @@ header a{
     font-size: 30px;
     text-decoration: none;
     color: rgba(19, 16, 16, 0.834);
-
 }
+
 .barra-navegadora{
     display: flex;
     justify-content: space-between;
@@ -45,6 +46,7 @@ header a{
     display: flex;
     justify-content:center;
 }
+
 #boton-carrito{
     margin: 15px;
     padding: 10px;
@@ -55,6 +57,19 @@ header a{
     display: flex;
     align-items: center;
 }
+
+.boton-eliminar{
+    width: 30px;
+    height: 30px;
+    background-image: url(./img/tacho.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(114, 4, 4, 0.836);
+    border-radius: 20%;
+    border: none;
+}
+
 #boton-carrito span{
     font-size: 25px;
     color: #F4F7F5;
@@ -66,10 +81,12 @@ header a{
     font-size: large;
     color:rgb(118, 96, 98, 0.93);
 }
+
 .logo{
     max-width: 95%;
     border-radius: 5px;
 }
+
 .precios-descripcion{
     font-size: large;
     max-width: 800px;
@@ -84,6 +101,8 @@ footer{
     color: #F4F7F5;
 }
 
+
+
 /* CONTENEDOR DE PRODUCTOS */
 
 #contenedorDeProductos{
@@ -91,6 +110,7 @@ footer{
     flex-wrap: wrap;
     font-family: 'Patrick Hand', cursive;
 }
+
 .producto{
     border-style:solid;
     border-radius: 5px;
@@ -138,10 +158,12 @@ h4{
     font-size: 20px;
     transition: transform 0.6s;
 }
+
 .btnCarrito:hover{
     transform: scale(1.02)
  
 }
+
 .boton-test{
     border-color:black;
     border-radius: 3px;
@@ -153,6 +175,7 @@ h4{
 }
 
 
+
 /* COMPRA */
 
 .compra{
@@ -160,8 +183,8 @@ h4{
     margin: 0 auto;
     border-style:solid;
     border-radius: 8px;
-    background-color:#000000;
-    color:#F4F7F5 ;
+    border-color: #000000;
+    background-color:rgb(219 213 213);
     margin: 10px auto;
     padding: 10px;
     box-shadow: 0px 0px 383px -65px rgba(0,0,0,0.15);
@@ -173,6 +196,7 @@ h4{
     max-width: 95%;
     margin: 0 auto;
 }
+
 .compra-item{
     display: flex;
     margin: 10px;
@@ -192,8 +216,8 @@ h4{
     margin: 0 auto;
     border-style:solid;
     border-radius: 8px;
-    background-color:#000000;
-    color:#F4F7F5 ;
+    border-color: #000000;
+    background-color:rgb(219 213 213);
     margin: 10px auto;
     padding: 10px;
     box-shadow: 0px 0px 383px -65px rgba(0,0,0,0.15);
@@ -211,9 +235,12 @@ h4{
     font-weight: bold;
     transition: transform 0.3s;
 }
+
 .btn:hover{
     background-color: brown;
 }
+
+
 
 /* MANTENIMIENTO */
 
@@ -221,11 +248,14 @@ h4{
     max-width: 500px;
     border-radius: 4px;
 }
+
+
 /* CLIENTE */
 
 .contenedor-clientes{
     margin-top: 80px;
 }
+
 #clientes{
     display: flex;
     justify-content: center;
@@ -233,6 +263,7 @@ h4{
     gap: 10px;
     margin: 30px;
 }
+
 .cliente{
     border: #2c2b2b;
     background-color: rgba(204, 206, 211, 0.322);
@@ -252,6 +283,9 @@ h4{
     -webkit-box-shadow: 0px 0px 383px -65px rgba(0,0,0,0.35);
     -moz-box-shadow: 0px 0px 383px -65px rgba(0,0,0,0.35);
 }
+
+
+
 /* MODAL */
 
 .modal-contenedor{
@@ -269,11 +303,13 @@ h4{
     opacity: 0;
     visibility: hidden;
 }
+
 .modal-active {
     opacity: 1;
     visibility: visible;
     z-index: 5;
 }
+
   .modal-carrito {
     position: relative;
     background-color: white;
@@ -284,9 +320,11 @@ h4{
     margin-top: -100%;
     transition: all 0.5s;
 }
+
 .modal-active .modal-carrito {
     margin-top: 0;
-  }
+}
+
   .producto-en-carrito {
     border-left: 5px solid rgb(118, 96, 98, 0.93) ;
     margin: 5px 0;
@@ -295,7 +333,8 @@ h4{
     justify-content: space-between;
     align-items: center;
     height: 40px;
-  }
+}
+
   .modal-carrito #carritoCerrar {
     position: absolute;
     top: 15px;
@@ -304,12 +343,14 @@ h4{
     color: rgb(118, 96, 98, 0.93) ;
     border: none;
     background-color: white;
-  }
+}
 
   .img-pendrive{
     width: 100px;    
-  }
+}
   
+
+
 /* MEDIAQUERIES */
 
 @media (max-width: 600px) {
@@ -326,7 +367,6 @@ h4{
     .compra{
         width: 340px; 
     }
-
     .metodoDePago{
         flex-direction: column;
         max-width: 270px;
@@ -339,11 +379,10 @@ h4{
         max-width: 60%;
     }
 }
+
 @media (max-width: 400px) {
-  
     header li{
-        flex-direction: column;
-        
+        flex-direction: column; 
     }
     .barra-navegadora a{
         font-size: 10px;
@@ -354,7 +393,6 @@ h4{
         border-width: 1px;
         border-radius: 3px;
     }
-
     .compra{
         width: 250px; 
     }
@@ -368,7 +406,6 @@ h4{
     .modal-carrito{
         width: 310px;
         padding: 1px;
-
     }
     .modal-carrito .btnCarrito{
         margin: 2px;

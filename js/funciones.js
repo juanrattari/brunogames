@@ -45,7 +45,7 @@ const mostrarEnCarrito = (productoAgregar) => {
                     <p>Versión: ${productoAgregar.version}</p>
                     <p>Precio: $${productoAgregar.precio}</p>
                     <p id="cant${productoAgregar.id}">Cantidad: ${productoAgregar.cantidad}</p>
-                    <button class="boton-eliminar" id="${productoAgregar.id}"><iconify-icon icon="ep:delete-filled" width="20" height="20"></iconify-icon></button>`
+                    <button class="boton-eliminar" id="${productoAgregar.id}"></button>`
     contenedorCarrito.appendChild(div)
 } 
 
@@ -83,7 +83,12 @@ document.getElementById("btnVaciarCarrito").onclick = () => {
       }).then((result) => {
        
         if (result.isConfirmed) {
-          Swal.fire('Carrito vaciado', '', 'Vacío')
+            Swal.fire({
+                icon: 'success',
+                title: 'Carrito vaciado',
+                showConfirmButton: false,
+                timer: 2000
+            })
           carritoDeCompras = [];
           
           actualizarCarrito ();
@@ -101,8 +106,6 @@ function actualizarCarrito (){
 }
 
 document.getElementById("btnConfirmarCompra").onclick = () => {
-    
-
         Swal.fire({
             title: '¿Seguro querés confirmar la compra?',
             showDenyButton: true,
@@ -112,7 +115,12 @@ document.getElementById("btnConfirmarCompra").onclick = () => {
           }).then((result) => {
            
             if (result.isConfirmed) {
-              Swal.fire('Te redireccionaremos a los métodos de pago. Cargando...', '', 'Comprando')
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Te redireccionaremos a los métodos de pago. Espera...',
+                    showConfirmButton: false,
+                    timer: 3000
+                })
               setTimeout(function(){location.href = "./pages/compra.html#contenedor-compra";} ,2000);
             } else if (result.isDenied) {
               Swal.fire('¡Regresa pronto!', '', 'info')
@@ -120,7 +128,11 @@ document.getElementById("btnConfirmarCompra").onclick = () => {
           })
 }
 
+
+
+
 /* LOCALSTORAGE */
+
 
 class Consola {
     constructor(obj){
@@ -163,6 +175,7 @@ function Verificar (){
 
 
 /* FETCH */
+
 const clientes = document.getElementById("clientes")
 
 fetch ("https://631918178e51a64d2bde8344.mockapi.io/api/v1/users")
